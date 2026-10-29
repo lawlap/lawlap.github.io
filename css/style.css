@@ -1,0 +1,190 @@
+/* Matches the WordPress.com "Big Brother" theme the site used through 2026. */
+
+:root {
+  --text: #444;
+  --heading: #283d4b;
+  --brand: #1f567d;
+  --nav-bg: rgba(27, 75, 109, 0.8);
+  --nav-link: #e2eef7;
+  --link: #1185d7;
+  --link-hover: #1da1ff;
+  --page-bg: #f5f6f7;
+  --panel-bg: #eaecee;
+  --rule: #ccc;
+  --serif: "Gentium Basic", Georgia, "Times New Roman", Times, serif;
+  --sans: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus { color: var(--link-hover); text-decoration: underline; }
+
+img { max-width: 100%; height: auto; }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 20px 0; }
+
+/* Header */
+
+.site-header {
+  background: var(--brand) url("../img/header.jpg") center / cover no-repeat;
+  text-align: center;
+}
+
+.site-branding { padding: 50px 30px 30px; }
+
+.site-title {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.site-title a, .site-title a:hover { color: #fff; text-decoration: none; }
+
+.site-description {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.main-navigation { background: var(--nav-bg); }
+.main-navigation ul { margin: 0; padding: 0; list-style: none; }
+.main-navigation li { display: inline-block; }
+.main-navigation a {
+  display: block;
+  padding: 9px 15px;
+  color: var(--nav-link);
+  font-family: var(--sans);
+  font-size: 14px;
+}
+.main-navigation a:hover,
+.main-navigation a[aria-current="page"] { color: #fff; text-decoration: none; }
+.main-navigation a[aria-current="page"] { background: rgba(0, 0, 0, 0.15); }
+
+/* Breadcrumbs (every page but Home) */
+
+.breadcrumbs {
+  margin: -25px 0 30px;
+  font-family: var(--sans);
+  font-size: 16px;
+}
+.breadcrumbs-root {
+  display: inline-block;
+  padding: 0.4em 16px;
+  background: var(--brand);
+  color: var(--page-bg);
+  font-weight: 800;
+}
+.breadcrumbs-root:hover { color: #fff; }
+.breadcrumbs-current {
+  display: inline-block;
+  padding: 5px 18px 5px 14px;
+  background: #fff;
+  color: #777;
+  border-radius: 0 3px 3px 0;
+}
+.breadcrumbs-current::before { content: ">"; margin-right: 7px; color: rgba(40, 40, 40, 0.2); }
+
+/* Layout: content card on the left, sidebar on the right */
+
+.site-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 272px;
+  gap: 30px;
+  align-items: start;
+  max-width: 1280px;
+  padding: 30px 30px 0 0;
+}
+
+.content-area { padding: 30px 0; }
+
+.article-wrapper {
+  max-width: 760px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 0 5px 5px 0;
+}
+
+.entry-title {
+  margin: 0 0 27px;
+  color: var(--heading);
+  font-family: var(--sans);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.entry-title a { color: var(--brand); }
+
+.entry-meta { margin: -15px 0 30px; font-family: var(--sans); font-size: 14px; }
+
+.entry-content p { margin: 20px 0; }
+.entry-content ul { padding-left: 40px; }
+.entry-content ul ul { margin: 0; }
+.entry-content h3 { font-family: var(--sans); color: var(--heading); }
+
+/* Section labels inside pages; the old site set these with <strong><big><big> */
+.section-label { margin: 20px 0 10px; font-size: 24px; font-weight: 700; }
+.section-label.small { font-size: 22px; }
+
+.alignleft { float: left; margin: 6px 40px 10px 0; }
+.clear { clear: both; }
+
+.subject { font-size: 0.85em; font-style: italic; }
+
+/* Sidebar */
+
+.widget-area { padding-top: 30px; }
+
+.widget {
+  padding: 15px;
+  background: var(--panel-bg);
+  border-radius: 5px 5px 0 0;
+  font-size: 16px;
+}
+.widget-title {
+  margin: 0 0 12px;
+  color: var(--heading);
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.widget p { margin: 0; }
+
+/* Footer */
+
+.site-footer {
+  padding: 30px;
+  background: var(--panel-bg);
+  font-size: 16px;
+}
+
+/* Narrow screens: sidebar drops below the content */
+
+@media (max-width: 876px) {
+  .site-content { grid-template-columns: 1fr; padding: 0 16px; gap: 0; }
+  .article-wrapper { max-width: none; border-radius: 5px; padding: 20px; }
+  .content-area { padding: 20px 0; }
+  .breadcrumbs { margin: 0 0 20px; }
+  .widget-area { padding-top: 0; padding-bottom: 30px; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 18px; }
+  .entry-title { font-size: 30px; }
+  .alignleft { float: none; display: block; margin: 0 auto 20px; }
+  .entry-content ul { padding-left: 24px; }
+}

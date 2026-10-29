@@ -33,25 +33,29 @@ Written 2026-10-28.
   cv/index.html
   blog/index.html
   blog/rent-vs-buy/index.html
-  files/              PDFs, xlsx, CV
-  img/                photos
-  css/style.css
+  404.html
+  files/              PDFs, xlsx, CV (original WordPress file names)
+  img/                photos and header image
+  css/style.css       matches the old "Big Brother" theme
+  teaching-2/, curriculum-vitae/, 2017/05/25/rent-vs-buy/
+                      forwarding pages at the old WordPress addresses
   ```
+
+  The header, menu, sidebar and footer are copied into each page. To change the menu or contact box, edit all six pages plus `404.html`.
 
 ## Steps
 
 ### 1. Back everything up (do this first, while the site is still live)
-- [ ] WordPress.com dashboard → **Tools → Export → Export all**. This downloads a `.zip` with an XML file of all posts and pages.
-- [ ] Same screen → **Export media library**. This downloads every PDF and image.
-- [ ] Save both into `OneDrive\Archive\lawrencelaplue-wordpress-export\`. They are a one-time backup, not working files.
+- [x] WordPress.com dashboard → **Tools → Export → Export all**. This downloads a `.zip` with an XML file of all posts and pages.
+- [x] Same screen → **Export media library**. This downloads every PDF and image.
+- [x] Saved both to `OneDrive - New Mexico State University\website\`. They are a one-time backup, not working files.
 - [ ] Copy any blog comments you want to keep. They are in the export XML, but they won't be displayed on the new site.
 
 ### 2. Build the new site (Claude can do most of this)
-- [ ] Put the exported media in `files/` and `img/`. Bring over only the files the pages actually link to.
-- [ ] Recreate the six pages as HTML. Keep the text as it is, and update anything stale (course list, papers, CV PDF).
-- [ ] Turn the email address into a `mailto:` link.
-- [ ] Add a `404.html` page.
-- [ ] Preview locally and check every link.
+- [x] Put the exported media in `files/` and `img/`. Bring over only the files the pages actually link to.
+- [x] Recreate the six pages as HTML. Keep the text as it is, and update anything stale (course list, papers, CV PDF).
+- [x] Add a `404.html` page.
+- [x] Preview locally and check every link.
 
 ### 3. Publish
 - [ ] Push to `main`.
