@@ -69,6 +69,8 @@ Written 2026-10-28.
 
 ## Decision: keep or drop the domain?
 
+**Status (2026-10-28):** undecided. The current term runs about 10 more months (to roughly Aug 2027; check the exact date in WordPress.com → Upgrades → Domains). Decide at least a month before renewal, because a transfer to another registrar can take up to a week.
+
 | | Drop it | Keep it (~$12–20/yr at a registrar such as Cloudflare or Porkbun) |
 |---|---|---|
 | Cost | $0 | Domain fee only; hosting stays free |
