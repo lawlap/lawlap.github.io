@@ -49,7 +49,7 @@ Written 2026-10-28.
 - [x] WordPress.com dashboard → **Tools → Export → Export all**. This downloads a `.zip` with an XML file of all posts and pages.
 - [x] Same screen → **Export media library**. This downloads every PDF and image.
 - [x] Saved both to `OneDrive - New Mexico State University\website\`. They are a one-time backup, not working files.
-- [ ] Copy any blog comments you want to keep. They are in the export XML, but they won't be displayed on the new site.
+- [x] Blog comments: the export has none, so nothing is lost.
 
 ### 2. Build the new site (Claude can do most of this)
 - [x] Put the exported media in `files/` and `img/`. Bring over only the files the pages actually link to.
@@ -70,6 +70,34 @@ Written 2026-10-28.
 - [ ] Turn off auto-renew for the plan, so it lapses at the end of the current term. Don't cancel early unless you get a refund.
 - [ ] Optional: before it lapses, add a line to the old home page saying "This site has moved to lawlap.github.io".
 - [ ] Decide what happens to the domain (below) **before** its renewal date.
+
+## After the port: suggested updates
+
+The initial port copies the old site as it is. These are proposed next changes, most important first. None of them is done yet.
+
+**Fix what's out of date or broken**
+- [ ] ALER "Walling Off Crime" has been published. The DOI now resolves to volume 25, issue 2, starting page 485. Replace "Accepted 2024 … (publication details pending)" with the full citation, and confirm the year and page range.
+- [ ] Research: the "Working and Completed Papers" heading has nothing under it. Fill it in or remove it.
+- [ ] Research: "Pollution Havens Revisited" and "Measuring Environmental Stringency" have the same one-line description, which looks like a copy-paste slip.
+- [ ] Research: the "Journal Metrics (restricted access)" SharePoint link can't be opened by visitors. Remove it from the public page.
+- [ ] Research: the data and do-file for the EEPS paper are on NMSU SharePoint, and those links break if the account or sharing settings change. Move the replication package to a permanent home with a DOI (openICPSR, Zenodo, or a GitHub repo archived to Zenodo).
+- [ ] Teaching: the course list and syllabi date from about 2015. Replace them with current courses and syllabi.
+- [ ] Teaching: dead or moved links. Charles Holt's UVA pages are gone, and the bfwpub "Favorite Ways to Learn Economics" page doesn't load. Marketplace Live is now Marketplace Simulations (marketplace-simulation.com).
+- [ ] CV PDF dates from July 2022. Upload a current one.
+- [ ] Contact: make the email address a `mailto:` link.
+
+**Reorganize**
+- [ ] Menu: Home · Research · Teaching · CV, with CV linking straight to the PDF. Move the "About Me" text onto Home, and rename the menu item "Lawrence D. LaPlue, III" to "Home".
+- [ ] Research: list newest first and group into Publications / Working Papers / Work in Progress. Put the extra links on one line per paper (`Abstract · PDF · Data`) instead of nested bullets.
+- [ ] Research: post the full accepted manuscript where each publisher allows it, rather than abstract-only PDFs. Check each journal's self-archiving policy first.
+- [ ] Blog: it has one post from 2017. Move "Rent vs Buy" under a small "Resources" page and drop Blog from the menu, unless you plan to write more posts.
+- [ ] Home: add links to your Google Scholar, ORCID, RePEc/IDEAS and SSRN profiles.
+- [ ] Header: change the tagline "Economics" to "Associate Professor of Economics, New Mexico State University". Optionally replace the East Tennessee header photo with a local one.
+
+**New content worth considering**
+- [ ] A Students / Advising page for IB majors: how study-abroad course matching works, what to send for a course-equivalency review, and who signs what. That would answer the common questions before they reach your inbox.
+- [ ] Current teaching, such as econometrics, with a short note on how you teach it, plus links to any public materials.
+- [ ] Updated photos. The headshot is from 2017.
 
 ## Decision: keep or drop the domain?
 
